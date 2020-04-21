@@ -2,7 +2,7 @@
 
 ## py-apple-quadruped-robot
 
-![](C:\Users\asus\Documents\GitHub\py-apple-quadruped-robot\pic\pic1.jpg)
+![](\pic1.jpg)
 
 ## 1 简介
 
