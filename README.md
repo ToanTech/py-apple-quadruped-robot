@@ -18,7 +18,7 @@
 
 喜欢项目的话，请B站一键三连并 Star 项目哦
 
-<img src="https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true" style="zoom:25%;" />
+<img src="https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true" style="zoom:50%;" />
 
 ## **2 贡献者**
 
