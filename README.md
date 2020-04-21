@@ -2,7 +2,7 @@
 
 ## py-apple-quadruped-robot
 
-![](\pic1.jpg)
+![](\pic\pic1.jpg)
 
 ## 1 简介
 
