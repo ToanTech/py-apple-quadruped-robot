@@ -2,11 +2,6 @@
 
 ## py-apple-quadruped-robot
 
-
-![](https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true)
-
-
-
 ## 1 简介
 
   本项目为菠萝狗(Py-Apple Dog) 的开源主站，项目旨在设计制造一只低成本的，可供简易DIY的开源四足机器狗。项目注重多平台化，目前软件以 Pyboard 作为主控,MicroPython作为编程语言，未来将会逐步支持 K210，树莓派等硬件平台。
@@ -23,7 +18,7 @@
 
 喜欢项目的话，请B站一键三连并 Star 项目哦
 
-
+<img src="https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true" style="zoom:50%;" />
 
 ## **2 贡献者**
 
