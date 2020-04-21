@@ -3,7 +3,7 @@
 ## py-apple-quadruped-robot
 
 ![](\pic\pic1.png)
-
+=======
 ## 1 简介
 
   本项目为菠萝狗(Py-Apple Dog) 的开源主站，项目旨在设计制造一只低成本的，可供简易DIY的开源四足机器狗。项目注重多平台化，目前软件以 Pyboard 作为主控,MicroPython作为编程语言，未来将会逐步支持 K210，树莓派等硬件平台。
