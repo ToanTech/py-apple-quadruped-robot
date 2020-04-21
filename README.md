@@ -3,7 +3,7 @@
 ## py-apple-quadruped-robot
 
 
-![](\pic\pic1.png)
+![](https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true)
 
 
 
