@@ -2,7 +2,7 @@
 
 ## 函数表
 
-函数表对应软件版本：<u>PADOG V0.1.01 BETA 2 2020417</u>
+函数表对应软件版本：<u>PADOG V0.1.02 BETA 1 2020423</u>
 
 运行：在运行时，请先引入padog模块
 
@@ -12,9 +12,9 @@ import padog
 
 
 
-##### padog.start_test(num)
+##### padog.trot(num)
 
-踏步测试，其中的 num 是踏步步数
+小跑步态，其中的 num 是小跑步数，num>0 往前，num<0 往后
 
 
 
