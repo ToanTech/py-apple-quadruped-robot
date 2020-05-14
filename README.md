@@ -52,6 +52,8 @@
 
 [7. 灯哥0基础DIY四足机器人指南（7）--软件架构、高度调节与逆解的实现 ](https://www.bilibili.com/video/BV1Qe411s7kp/)
 
+[8. 灯哥0基础DIY四足机器人指南（8）--用Matlab画出摆线步态曲线](https://www.bilibili.com/video/BV1KQ4y1K7aV/)
+
 
 
 ## 4 目前开源代码实现的功能
