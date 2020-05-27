@@ -44,8 +44,6 @@ import padog
 padog.control_4_legs(30,100)  #四条腿都同时设置到坐标(30，100)
 ```
 
-#------以下函数将在20205525版本开放
-
 **4. padog.turn(num)**
 
 机器人原地自转，num为步数
@@ -89,4 +87,4 @@ padog.gesture(10,-10)  #仰头10度，负方向（左）滚转10度
 
 **8. padog.foot_init()**
 
-机器人腿部校准系统，具体使用方法见视频：（...待添加...）
+机器人腿部校准系统，具体使用方法见视频：https://www.bilibili.com/video/BV19K411H7P3/
