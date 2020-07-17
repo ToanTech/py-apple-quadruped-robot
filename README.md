@@ -1,50 +1,89 @@
-# **菠萝狗**--一个低成本八自由度串联腿开源四足机器人
-
-## py-apple-quadruped-robot
+# **菠萝狗**--一个低成本大型全套四足机器人软硬件开源项目
 
 ## 1 简介
 
-  本项目为菠萝狗(Py-Apple Dog) 的开源主站，项目旨在设计制造一只低成本的，可供简易DIY的开源四足机器狗。项目注重多平台化，目前软件以 Pyboard 作为主控,MicroPython作为编程语言，未来将会逐步支持 K210，树莓派等硬件平台。
+  本项目为菠萝狗(Py-Apple Dog) 的开源主站，项目旨在设计制造一只低成本的，可供简易DIY的开源四足机器狗。项目注重多平台化，是一个大型全套四足机器人开源项目。主要由三个分项目构成（点击可进入到对应的Github中）：
 
-**项目交流群(QQ)：1071643412**
+- [Py-Apple Dynamics 系列 开源四足控制软件](https://github.com/ToanTech/py-apple-dynamics)
+- [Py-Apple Controller 系列 开源四足万能控制器](https://github.com/ToanTech/py-apple-controller)
+- [Py-Apple Structure 系列 开源四足机械结构](https://github.com/ToanTech/py-apple-structure)
 
-**项目B站：**[湃湃狗的魔法口袋](https://space.bilibili.com/493192058/?share_source=copy_link&share_medium=iphone&bbid=4416d8abc8a2b4ce8ee4b65c247edea8&ts=1587442435)
-
-<u>菠萝狗制造资料是完全开源的，你可以自行DIY。但是，如果**想要一站式配齐所有硬件、机械、螺丝的话，可以来考虑一下我的 DIY 套件**，绝对良心价。欢迎大家购买套件支持我，支持开源项目。**为熬夜开发菠萝狗和制作四足机器人教程的我吃饭加鸡腿，熬夜添咖啡！！**</u>
-
-**项目官方淘宝店：**[ 四足机器人湃湃狗](https://shop564514875.taobao.com/)
-
-
-
-喜欢项目的话，请B站一键三连并 Star 项目哦
+  三个项目相辅相成，又相互配套。每个部分独立更新，集合起来就是一个大型且全套的四足机器人软硬件开源项目。喜欢项目的话，请B站一键三连并 Star 项目哦。[项目详细介绍，点击查看]()
 
 <img src="https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true" style="zoom:50%;" />
 
-## **2 贡献者**
+## 2 用户支持和讨论论坛
 
-#### 长期贡献者
+  项目配套有完善的用户支持资料和讨论群组，敬请访问：
 
- ①**灯哥**(ream_d@yeah.net) 项目创世人；主要维护者；维护内容囊括菠萝狗目前全部的官方软件开发和三维图，为各个版本提供软件支持
+- 用户支持**QQ群**（桌面级四足机器狗交流群 PY PY DOG）：**1071643412**
+- 讨论论坛（机器狗工坊）：http://www.leggedrobot.cn/forum.php?mod=forumdisplay&fid=44
+- 项目效果视频浏览（B站）：[灯哥开源四足机器人](https://space.bilibili.com/493192058/?share_source=copy_link&share_medium=iphone&bbid=4416d8abc8a2b4ce8ee4b65c247edea8&ts=1587442435)
 
-#### 其他贡献者
+## 3 开源开发信息
 
-①**hh**(65234774@qq.com) 贡献 K210 版本菠萝狗，另名AI DOG.BL，为此版本核心贡献者
+- [Py-Apple Dynamics Github 仓库](https://github.com/ToanTech/py-apple-dynamics)
+- [Py-Apple Controller Github 仓库](https://github.com/ToanTech/py-apple-controller)
+- [Py-Apple Structure Github 仓库](https://github.com/ToanTech/py-apple-structure)
+- 二<u>次开发教程，参与各本开源项目开发的方法，请对应点击到各 Github 仓库中查看</u>
+- 菠萝狗开源四足机器人项目开发者交流QQ群：<u>**960502665**</u>
 
-②**蜗牛蜗牛跑**(1987124395@qq.com)贡献地面站
+## 4 Py-Apple Dog 项目搭建方法
 
-③**James • F**(8650841@qq.com)贡献红外遥控程序
+- #### 如果你是0基础
 
-④**ashda(**wsdsgqc@gmail.com)贡献Arduino版本
+1.先学习 [频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://space.bilibili.com/493192058/channel/detail?cid=135699) 的灯哥基础视频（用电脑打开，手机可能打不开频道）
 
-## 3 配套的教程（点击即可进入）
+2.访问[Py-Apple Structure 系列 开源四足机械结构](https://github.com/ToanTech/py-apple-structure) 选择并根据里面指导打印并配齐机械结构和零件
 
-  针对这只开源四足机器人，我为大家精心准备了配套的四足机器人教程**<u>（共两个系列）</u>**
+3.访问[Py-Apple Controller 系列 开源四足万能控制器](https://github.com/ToanTech/py-apple-controller)选择并根据里面指导制造主控板
 
-#### 一 、四足机器人DIY理论手把手教学
+4.访问[Py-Apple Dynamics 系列 开源四足控制软件](https://github.com/ToanTech/py-apple-dynamics)选择并根据里面指导下载烧录四足机器人控制程序
 
-#### 1. 灯哥系列
+5.按照前面的视频，学习机器人操作，开始享受
 
-**项目主课程**
+6.加入项目讨论总QQ群聊，还有讨论论坛，寻找爱好者组织
+
+7.进一步学习，尝试按照[此处说明](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=48&extra=page%3D1)二次开发
+
+- #### 如果你已经有基础（直接搭建项目）
+
+1.访问[Py-Apple Structure 系列 开源四足机械结构](https://github.com/ToanTech/py-apple-structure) 选择并根据里面指导打印并配齐机械结构和零件
+
+2.访问[Py-Apple Controller 系列 开源四足万能控制器](https://github.com/ToanTech/py-apple-controller)选择并根据里面指导制造主控板
+
+3.访问[Py-Apple Dynamics 系列 开源四足控制软件](https://github.com/ToanTech/py-apple-dynamics)选择并根据里面指导下载烧录四足机器人控制程序
+
+4..按照[频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://space.bilibili.com/493192058/channel/detail?cid=135699)的视频，学习机器人操作，开始享受
+
+5.加入项目讨论总QQ群聊，还有讨论论坛，寻找爱好者组织
+
+6.进一步学习，尝试按照[此处说明](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=48&extra=page%3D1)二次开发
+
+7.有兴趣了解程序和机器人控制原理的原理的，可以按照 [频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://space.bilibili.com/493192058/channel/detail?cid=135699) 学习四足机器人原理视频
+
+- #### 直接配齐所有电子元器件
+
+  菠萝狗全项目制造资料是完全开源的，你可以自行DIY。
+
+  但是，如果**想要一站式配齐所有硬件、机械、螺丝的话，可以来考虑一下我的 DIY 套件**，绝对良心价。欢迎大家购买套件支持我，支持开源项目。**为熬夜开发菠萝狗和制作四足机器人教程的我吃饭加鸡腿，熬夜添咖啡！！**
+
+**项目官方淘宝店：**[ 四足机器人湃湃狗](https://shop564514875.taobao.com/)
+
+## 5 Py-Apple Quadruped Robot 项目贡献者
+
+- [核心代码贡献者](https://github.com/ToanTech/py-apple-dynamics/blob/master/contributors_m.md)
+- [短期部分功能贡献者](https://github.com/ToanTech/py-apple-dynamics/blob/master/contributors_s.md)
+- [WIKI或者资料贡献者](https://github.com/ToanTech/py-apple-dynamics/blob/master/contributors_w.md)
+- [机械结构贡献者列表](https://github.com/ToanTech/py-apple-structure/blob/master/contributors_m.md)
+- [万能控制器贡献者列表](https://github.com/ToanTech/py-apple-controller/blob/master/contributors_m.md)
+
+## 6 配套的教程（点击即可进入）
+
+  针对这只开源四足机器人，为大家精心准备了配套的四足机器人教程**<u>（共两个系列）</u>**
+
+- #### 灯哥系列
+
 
 [1. 灯哥0基础DIY四足机器人指南（1）--绪论 ](https://www.bilibili.com/video/BV1YE411A7VA/)
 
@@ -62,73 +101,10 @@
 
 [8. 灯哥0基础DIY四足机器人指南（8）--用Matlab画出摆线步态曲线](https://www.bilibili.com/video/BV1KQ4y1K7aV/)
 
-#### 2. 灯妹系列
+- #### 灯妹系列
+
 
 **项目主课程灯哥系列的数学小知识补充**
 
 [1. 灯妹四足机器人数学知识小课（1）--旋转变换](https://www.bilibili.com/video/BV1Hp4y1D7zn/)
-
-#### 二 、菠萝狗DIY调参过程手把手教学
-
-（此系列专注于怎么把我开源的这个菠萝狗的效果调好）
-
- [1. 灯哥开源四足机器人调参教程(1)--菠萝狗新调中系统使用方法（针对525软件大更新）](https://www.bilibili.com/video/BV19K411H7P3/)
-
-
-
-## 4 目前开源代码实现的功能
-
-<u>最新开源代码版本：PADOG V2.0  官方程序 2020525</u>[！点击下载！](https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/%E6%9C%80%E6%96%B0-%E8%8F%A0%E8%90%9D%E7%8B%97%E5%88%B6%E9%80%A0%E8%B5%84%E6%96%99%EF%BC%883D%E6%A8%A1%E5%9E%8B%E3%80%81%E9%85%8D%E4%BB%B6%E8%A1%A8%E3%80%81%E7%A8%8B%E5%BA%8F%EF%BC%89/%E5%AE%98%E6%96%B9%E7%89%88(%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B020200527)/PADOG%20V2.0%20%E5%AE%98%E6%96%B9%202020525.zip)
-
-<u>加粗的功能是这个版本增加的</u>
-
-1. 运动学逆解
-2. 踏步
-3. 高度调节
-4. 前后小跑步态
-5. <u>**转弯功能**</u>
-6. <u>**姿态调整功能**</u>
-7. <u>**全向平移功能**</u>
-8. **<u>跳跃</u>**
-9. <u>**人性化调中功能（初版）**</u>
-
-下一版本释放功能：上面 4-8 点功能的深化
-
-
-
-## 5 DIY指南
-
-<u>**如果你是0基础**</u>
-
-1. 先学习灯哥灯妹的视频系列，按照视频系列一步步学习
-
-2. 3D 打印 Github 中 "最新-菠萝狗制造资料（3D模型、配件表、程序）" 中的三维模型
-3.  按照“最新-菠萝狗制造资料（3D模型、配件表、程序）”配齐电控元器件
-4. 在“最新-菠萝狗制造资料（3D模型、配件表、程序）”文件夹中下载菠萝狗开源程序，导入PyBoard
-5. 按照教程视频中的组装方法组装、调试、玩耍
-
-<u>**如果你已经有基础**</u>
-
-1. 3D 打印 Github 中 "最新-菠萝狗制造资料（3D模型、配件表、程序）" 中的三维模型
-
-2.  按照“最新-菠萝狗制造资料（3D模型、配件表、程序）”配齐电控元器件
-3. 在“最新-菠萝狗制造资料（3D模型、配件表、程序）”文件夹中下载菠萝狗程序,导入PyBoard
-
-3. 按照教程视频中的组装方法组装、调试、玩耍
-
-   
-
-## 6 开发文档
-
-点击以下链接进入开发函数说明表和参数说明表
-
-[1. 函数表](fun_list.md)
-
-[2. 参数说明表](parameter.md)
-
-## 7 文件目录说明
-
-3D文件或程序文件名称中含“官方、验证完成”等的都是经过官方验证过并接受官方支持的方案
-
-若文件名称中无上述标签，证明是官方选出认为比较好，但尚待验证的方案
 
