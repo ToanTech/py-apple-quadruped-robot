@@ -28,6 +28,7 @@
 | 12   | 动态运动参数调整                                             |
 | 13   | 无极调速                                                     |
 | 14   | 巡线程序（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+| 15   | 图形化编程（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
 
 
 
