@@ -2,13 +2,17 @@
 
 ## 1 简介
 
-  本项目为菠萝狗(Py-Apple Dog) 的开源主站，项目旨在设计制造一只低成本的，可供简易DIY的开源四足机器狗。项目注重多平台化，是一个大型全套四足机器人开源项目。主要由三个分项目构成（点击可进入到对应的Github中）：
+  本项目为菠萝狗(Py-Apple Dog) 的开源主站，项目旨在设计制造一只低成本的，可供简易DIY的开源四足机器狗。项目注重多平台化，是一个大型全套四足机器人开源项目。主要由四个分项目构成（点击可进入到对应的Github中）：
 
 - [Py-Apple Dynamics 系列 开源四足控制软件](https://github.com/ToanTech/py-apple-dynamics)
+
 - [Py-Apple Controller 系列 开源四足万能控制器](https://github.com/ToanTech/py-apple-controller)
+
 - [Py-Apple Structure 系列 开源四足机械结构](https://github.com/ToanTech/py-apple-structure)
 
-  三个项目相辅相成，又相互配套。每个部分独立更新，集合起来就是一个大型且全套的四足机器人软硬件开源项目。**喜欢项目的话，请B站一键三连并 Star 项目哦**。[项目详细介绍，点击查看](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=52&extra=page%3D1)
+- [Py-Apple BLDC 系列 开源无刷四足机器人！！](https://github.com/ToanTech/py-apple-bldc-quadruped-robot)
+
+  四个项目相辅相成，又相互配套。每个部分独立更新，集合起来就是一个大型且全套的四足机器人软硬件开源项目。**喜欢项目的话，请B站一键三连并 Star 项目哦**。[项目详细介绍，点击查看](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=52&extra=page%3D1)
 
 <img src="https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true" style="zoom:50%;" />
 
@@ -27,8 +31,12 @@
 | 11   | 并连腿控制                                                   |
 | 12   | 动态运动参数调整                                             |
 | 13   | 无极调速                                                     |
-| 14   | 巡线程序（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
-| 15   | 图形化编程（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+| 14   | VMC步态算法                                                  |
+| 15   | WALK 爬楼梯算法                                              |
+| 16   | 巡线程序（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+| 17   | 图形化编程（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+
+
 
 
 
@@ -74,7 +82,7 @@
 
 3.访问[Py-Apple Dynamics 系列 开源四足控制软件](https://github.com/ToanTech/py-apple-dynamics)选择并根据里面指导下载烧录四足机器人控制程序
 
-4..按照[频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://space.bilibili.com/493192058/channel/detail?cid=135699)的视频，学习机器人操作，开始享受
+4..按照[频道1](https://www.bilibili.com/video/BV1b5411L7ks/) 的视频，学习机器人操作，开始享受
 
 5.加入项目讨论总QQ群聊，还有讨论论坛，寻找爱好者组织
 
@@ -100,10 +108,11 @@
 
 ## 6 配套的教程（点击即可进入）
 
-  针对这只开源四足机器人，为大家精心准备了配套的四足机器人教程**<u>（共两个系列）</u>**
+  针对这只开源四足机器人，为大家精心准备了配套的四足机器人教程**<u>（共三个系列）</u>**
 
-- #### 灯哥系列
-
+- #### 灯哥系列（新版本）--更新中 最新更新：2021.3.8
+[灯哥0基础DIY四足机器人指南（新版） ](https://www.bilibili.com/video/BV1b5411L7ks/)
+- #### 灯哥系列（老版本）
 
 [1. 灯哥0基础DIY四足机器人指南（1）--绪论 ](https://www.bilibili.com/video/BV1YE411A7VA/)
 
