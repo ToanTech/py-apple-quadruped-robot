@@ -44,8 +44,10 @@
 
   项目配套有完善的用户支持资料和讨论群组，敬请访问：
 
-- 用户支持**QQ群**（桌面级四足机器狗交流群 PY PY DOG）：**1071643412**
+- 用户支持**QQ群1**（舵机四足机器狗交流群 ）：**1071643412**
+- 用户支持**QQ群2**（无刷四足机器狗交流群 ）：**1005923565**
 - 讨论论坛（机器狗工坊）：http://www.leggedrobot.cn/forum.php?mod=forumdisplay&fid=44
+- 官方Gitee仓库（国内下载资料，速度更快）：[ream_d (ream_d) - Gitee.com](https://gitee.com/ream_d)
 - 项目效果视频浏览（B站）：[灯哥开源四足机器人](https://space.bilibili.com/493192058/?share_source=copy_link&share_medium=iphone&bbid=4416d8abc8a2b4ce8ee4b65c247edea8&ts=1587442435)
 
 ## 3 开源开发信息
@@ -137,3 +139,6 @@
 
 [1. 灯妹四足机器人数学知识小课（1）--旋转变换](https://www.bilibili.com/video/BV1Hp4y1D7zn/)
 
+- #### 代码文字版详解
+
+[Py-apple Dynamics 6.0 代码文字版本详解 by LiangYuHao](https://blog.csdn.net/weixin_41659552?spm=1001.2014.3001.5343)
