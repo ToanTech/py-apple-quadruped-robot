@@ -65,7 +65,7 @@
 
 - #### 如果你是0基础
 
-1.先学习 [频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://space.bilibili.com/493192058/channel/detail?cid=135699) 的灯哥基础视频（用电脑打开，手机可能打不开频道）
+1.先学习 [频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://www.bilibili.com/video/BV1b5411L7ks) 的灯哥基础视频（用电脑打开，手机可能打不开频道）
 
 2.访问[Py-Apple Structure 系列 开源四足机械结构](https://github.com/ToanTech/py-apple-structure) 选择并根据里面指导打印并配齐机械结构和零件
 
@@ -101,7 +101,7 @@
 
 但是，如果**想要一站式配齐所有硬件、机械、螺丝的话，可以来考虑一下我的 DIY 套件**，绝对良心价。欢迎大家购买套件支持我，支持开源项目。**为熬夜开发菠萝狗和制作四足机器人教程的我吃饭加鸡腿，熬夜添咖啡！！**
 
-**项目官方淘宝店：**[ 四足机器人湃湃狗](https://shop564514875.taobao.com/)
+**项目官方淘宝店：**[ 灯哥开源](https://shop564514875.taobao.com/)
 
 ## 5 Py-Apple Quadruped Robot 项目贡献者
 
@@ -115,7 +115,7 @@
 
   针对这只开源四足机器人，为大家精心准备了配套的四足机器人教程**<u>（共三个系列）</u>**
 
-- #### 灯哥系列（新版本）--更新中 最新更新：2021.3.8
+- #### 灯哥系列（新版本）--更新中 最新更新：2021.4.5
 [灯哥0基础DIY四足机器人指南（新版） ](https://www.bilibili.com/video/BV1b5411L7ks/)
 - #### 灯哥系列（老版本）
 
@@ -137,10 +137,11 @@
 
 - #### 灯妹系列
 
-
-**项目主课程灯哥系列的数学小知识补充**
-
 [1. 灯妹四足机器人数学知识小课（1）--旋转变换](https://www.bilibili.com/video/BV1Hp4y1D7zn/)
+
+[2.【进阶教程】机器狗12自由度逆解【灯哥0基础DIY四足机器人指南】-进阶篇1](https://www.bilibili.com/video/BV1jX4y1g7u6/)
+
+[3.【进阶教程】机器狗12自由度正解【灯哥0基础DIY四足机器人指南】-进阶篇2](https://www.bilibili.com/video/BV1Gv41177gd/)
 
 - #### 代码文字版详解
 
