@@ -24,17 +24,20 @@
 | 4    | 姿态控制                                                     |
 | 5    | 小跑步态                                                     |
 | 6    | WIFI遥控                                                     |
-| 7    | WIFI参数调节                                                 |
-| 8    | 转弯                                                         |
-| 9    | 静态姿态自稳定                                               |
-| 10   | 串联腿控制                                                   |
-| 11   | 并连腿控制                                                   |
-| 12   | 动态运动参数调整                                             |
-| 13   | 无极调速                                                     |
-| 14   | VMC步态算法                                                  |
-| 15   | WALK 爬楼梯算法                                              |
-| 16   | 巡线程序（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
-| 17   | 图形化编程（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+| 7    | 航模遥控器（基于PWM）遥控                                    |
+| 8    | WIFI参数调节                                                 |
+| 9    | 转弯                                                         |
+| 10   | 静态姿态自稳定                                               |
+| 11   | 串联腿控制                                                   |
+| 12   | 并连腿控制                                                   |
+| 13   | 动态运动参数调整                                             |
+| 14   | 无极调速                                                     |
+| 15   | VMC步态算法                                                  |
+| 16   | WALK 爬楼梯算法                                              |
+| 17   | 巡线程序（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+| 18   | 图形化编程（见 [Dynamics](https://github.com/ToanTech/py-apple-dynamics) 仓库） |
+
+
 
 
 
