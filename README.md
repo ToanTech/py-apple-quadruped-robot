@@ -14,7 +14,7 @@
 
   四个项目相辅相成，又相互配套。每个部分独立更新，集合起来就是一个大型且全套的四足机器人软硬件开源项目。**喜欢项目的话，请B站一键三连并 Star 项目哦**。[项目详细介绍，点击查看](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=52&extra=page%3D1)
 
-<img src="https://github.com/ToanTech/py-apple-quadruped-robot/blob/master/pic/pic1.jpg?raw=true" style="zoom:50%;" />
+![image1](/pic/pic1.jpg)
 
 | 编号 | 目前已实现的功能                                             |
 | ---- | ------------------------------------------------------------ |
