@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>Py-apple 舵机标定</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        a{
+          display: block;width: 100%;height: 100%;line-height: 100px;font-size: 14px;text-align: center;text-decoration:none;color:#000000;
+        }
+        .content{
+            width: 200px;height: 200px;position: relative;margin:50px auto;left: 0;top:50%;bottom: 0;right:0;
+            box-shadow: 0px 0px 550px rgba(255, 255, 255, 0.3) inset,0px 0px 5px #FFFFFF;
+        }
+        .quartercircle{
+            position:absolute;width: 100px;height: 100px;-webkit-border-radius: 100px 0 0 0;
+        }
+        .divLeft{
+            top: 25%;left: -10%; transform:rotate(-45deg);background-color: bisque ;
+        }
+        .divTop{
+            top: -10%;left: 25%; transform:rotate(45deg);background-color: burlywood ;
+        }
+        .divRight{
+            top: 25%;left: 60%;transform:rotate(135deg);background-color: darkgray ;
+        }
+        .divBottom{
+            top: 60%;left: 25%;transform:rotate(-135deg);background-color: darkkhaki ;
+        }
+        .circle{
+          width:50%;height:50%;position: absolute;z-index: 100;top:0%;left:0%;bottom:0;right: 0;margin:auto;border-radius: 100%;background-color: #889900;text-align: center;
+        }
+        .circle span{
+            display: block;width: 100%;height: 100%;line-height: 200px;font-size: 24px;
+        }
+        .quartercircle a{
+            position: absolute;width: 100%;height: 100%;
+            background: #888888;
+        }
+        .quartercircle a:hover{
+            background: #8BFF7C;
+        }
+
+    </style>
+
+<body>
+<center><h1>Py-apple Dog 舵机标定</h1></center>
+<div class="content" style="">
+    <form action="/" method="get" accept-charset="utf-8"> 
+    <div class="quartercircle divLeft" style="">
+      <a href="?key=l1" style="background: no-repeat center;transform:rotate(45deg);">腿 1</a>
+    </div>
+    <div class="quartercircle divTop" style="">
+        <a href="?key=l2" style="background: no-repeat center;transform:rotate(-45deg);">腿 2</a>
+    </div>
+    <div class="quartercircle divRight" style="">
+        <a href="?key=l3" style="background: no-repeat center;transform:rotate(-135deg);">腿 3</a>
+    </div>
+    <div class="quartercircle divBottom" style="">
+        <a href="?key=l4" style="display:block;position:absolute;z-index:50;background: no-repeat center;transform:rotate(135deg);">腿 4</a>
+    </div>
+    <div class="circle" style="background-color: red;"><a href="?key=sc">保存并退出</a></div>
+  </form>
+</div>
+<div class="content" style="">
+    <form action="/" method="get" accept-charset="utf-8"> 
+    <div class="quartercircle divLeft" style="">
+      <a href="?key=sd" style="background: no-repeat center;transform:rotate(45deg);">小腿-</a>
+    </div>
+    <div class="quartercircle divTop" style="">
+        <a href="?key=hi" style="background: no-repeat center;transform:rotate(-45deg);">大腿+</a>
+    </div>
+    <div class="quartercircle divRight" style="">
+        <a href="?key=si" style="background: no-repeat center;transform:rotate(-135deg);">小腿+</a>
+    </div>
+    <div class="quartercircle divBottom" style="">
+        <a href="?key=hd" style="display:block;position:absolute;z-index:50;background: no-repeat center;transform:rotate(135deg);">大腿-</a>
+    </div>
+    <div class="circle" style="background-color: red;"><a href="?key=t9">开始标定</a></div>
+  </form>
+</div>
+<br />
+
+
+
+
+
+
+
+

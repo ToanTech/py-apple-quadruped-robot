@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html lang="zh-CN">
+<html>
+	<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>菠萝万能控 V6.8</title>
+		<style>
+*
+{
+	box-sizing: border-box;
+}
+
+.row
+{
+	display: inline-flex;
+	clear: both;
+}
+.columnLateral
+{
+  float: left;
+  width: 15%;
+  min-width: 300px;
+}
+
+#joystick
+{
+	border: 0px solid #FF0000;
+}
+
+.dimSlide { transform: scaleX(2) rotate(0deg); width: 200px;position: relative}
+		</style>
+<script language="javascript">
+var JoyStick = (function(container, parameters)
+{
+	parameters = parameters || {};
+	var title = (typeof parameters.title === "undefined" ? "joystick" : parameters.title),
+		width = (typeof parameters.width === "undefined" ? 0 : parameters.width),
+		height = (typeof parameters.height === "undefined" ? 0 : parameters.height),
+		internalFillColor = (typeof parameters.internalFillColor === "undefined" ? "#00AA00" : parameters.internalFillColor),
+		internalLineWidth = (typeof parameters.internalLineWidth === "undefined" ? 2 : parameters.internalLineWidth),
+		internalStrokeColor = (typeof parameters.internalStrokeColor === "undefined" ? "#003300" : parameters.internalStrokeColor),
+		externalLineWidth = (typeof parameters.externalLineWidth === "undefined" ? 2 : parameters.externalLineWidth),
+		externalStrokeColor = (typeof parameters.externalStrokeColor ===  "undefined" ? "#008000" : parameters.externalStrokeColor),
+		autoReturnToCenter = (typeof parameters.autoReturnToCenter === "undefined" ? true : parameters.autoReturnToCenter);
+	
+	// Create Canvas element and add it in the Container object
+	var objContainer = document.getElementById(container);
+	var canvas = document.createElement("canvas");
+	canvas.id = title;
+	if(width === 0) { width = objContainer.clientWidth; }
+	if(height === 0) { height = objContainer.clientHeight; }
+	canvas.width = width;
+	canvas.height = height;
+	objContainer.appendChild(canvas);
+	var context=canvas.getContext("2d");
+	
+	var pressed = 0; // Bool - 1=Yes - 0=No
+    var circumference = 2 * Math.PI;
+    var internalRadius = (canvas.width-((canvas.width/2)+10))/2;
+	var maxMoveStick = internalRadius + 5;
+	var externalRadius = internalRadius + 30;
+	var centerX = canvas.width / 2;
+	var centerY = canvas.height / 2;
+	var directionHorizontalLimitPos = canvas.width / 10;
+	var directionHorizontalLimitNeg = directionHorizontalLimitPos * -1;
+	var directionVerticalLimitPos = canvas.height / 10;
+	var directionVerticalLimitNeg = directionVerticalLimitPos * -1;
+	// Used to save current position of stick
+	var movedX=centerX;
+	var movedY=centerY;
+		
+	// Check if the device support the touch or not
+	if("ontouchstart" in document.documentElement)
+	{
+		canvas.addEventListener("touchstart", onTouchStart, false);
+		canvas.addEventListener("touchmove", onTouchMove, false);
+		canvas.addEventListener("touchend", onTouchEnd, false);
+	}
+	else
+	{
+		canvas.addEventListener("mousedown", onMouseDown, false);
+		canvas.addEventListener("mousemove", onMouseMove, false);
+		canvas.addEventListener("mouseup", onMouseUp, false);
+	}
+	// Draw the object
+	drawExternal();
+	drawInternal();
+
+	/******************************************************
+	 * Private methods
+	 *****************************************************/
+
+	/**
+	 * @desc Draw the external circle used as reference position
+	 */
+	function drawExternal()
+	{
+		context.beginPath();
+		context.arc(centerX, centerY, externalRadius, 0, circumference, false);
+		context.lineWidth = externalLineWidth;
+		context.strokeStyle = externalStrokeColor;
+		context.stroke();
+	}
+
+	/**
+	 * @desc Draw the internal stick in the current position the user have moved it
+	 */
+	function drawInternal()
+	{
+		context.beginPath();
+		if(movedX<internalRadius) { movedX=maxMoveStick; }
+		if((movedX+internalRadius) > canvas.width) { movedX = canvas.width-(maxMoveStick); }
+		if(movedY<internalRadius) { movedY=maxMoveStick; }
+		if((movedY+internalRadius) > canvas.height) { movedY = canvas.height-(maxMoveStick); }
+		context.arc(movedX, movedY, internalRadius, 0, circumference, false);
+		// create radial gradient
+		var grd = context.createRadialGradient(centerX, centerY, 5, centerX, centerY, 200);
+		// Light color
+		grd.addColorStop(0, internalFillColor);
+		// Dark color
+		grd.addColorStop(1, internalStrokeColor);
+		context.fillStyle = grd;
+		context.fill();
+		context.lineWidth = internalLineWidth;
+		context.strokeStyle = internalStrokeColor;
+		context.stroke();
+	}
+	
+	/**
+	 * @desc Events for manage touch
+	 */
+	function onTouchStart(event) 
+	{
+		pressed = 1;
+	}
+
+	function onTouchMove(event)
+	{
+		// Prevent the browser from doing its default thing (scroll, zoom)
+		event.preventDefault();
+		if(pressed === 1 && event.targetTouches[0].target === canvas)
+		{
+			movedX = event.targetTouches[0].pageX;
+			movedY = event.targetTouches[0].pageY;
+			// Manage offset
+			if(canvas.offsetParent.tagName.toUpperCase() === "BODY")
+			{
+				movedX -= canvas.offsetLeft;
+				movedY -= canvas.offsetTop;
+			}
+			else
+			{
+				movedX -= canvas.offsetParent.offsetLeft;
+				movedY -= canvas.offsetParent.offsetTop;
+			}
+			// Delete canvas
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			// Redraw object
+			drawExternal();
+			drawInternal();
+		}
+	} 
+
+	function onTouchEnd(event) 
+	{
+		pressed = 0;
+		// If required reset position store variable
+		if(autoReturnToCenter)
+		{
+			movedX = centerX;
+			movedY = centerY;
+		}
+		// Delete canvas
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		// Redraw object
+		drawExternal();
+		drawInternal();
+		//canvas.unbind('touchmove');
+	}
+
+	/**
+	 * @desc Events for manage mouse
+	 */
+	function onMouseDown(event) 
+	{
+		pressed = 1;
+	}
+
+	function onMouseMove(event) 
+	{
+		if(pressed === 1)
+		{
+			movedX = event.pageX;
+			movedY = event.pageY;
+			// Manage offset
+			if(canvas.offsetParent.tagName.toUpperCase() === "BODY")
+			{
+				movedX -= canvas.offsetLeft;
+				movedY -= canvas.offsetTop;
+			}
+			else
+			{
+				movedX -= canvas.offsetParent.offsetLeft;
+				movedY -= canvas.offsetParent.offsetTop;
+			}
+			// Delete canvas
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			// Redraw object
+			drawExternal();
+			drawInternal();
+		}
+	}
+
+	function onMouseUp(event) 
+	{
+		pressed = 0;
+		// If required reset position store variable
+		if(autoReturnToCenter)
+		{
+			movedX = centerX;
+			movedY = centerY;
+		}
+		// Delete canvas
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		// Redraw object
+		drawExternal();
+		drawInternal();
+		//canvas.unbind('mousemove');
+	}
+
+	/******************************************************
+	 * Public methods
+	 *****************************************************/
+
+	this.GetX = function ()
+	{
+		return (100*((movedX - centerX)/maxMoveStick)).toFixed();
+	};
+
+	/**
+	 * @desc Normalizzed value of Y move of stick
+	 * @return Integer from -100 to +100
+	 */
+	this.GetY = function ()
+	{
+		return ((100*((movedY - centerY)/maxMoveStick))*-1).toFixed();
+	};
+
+});
+
+function dimSetp(evt) {
+  var me1
+  var xmlhttp1=new XMLHttpRequest();   
+  me1 = evt.target;
+  xmlhttp1.open("GET","pit=" + me1.value,true); xmlhttp1.send()
+} 
+
+function dimSetr(evt) {
+  var me1
+  var xmlhttp1=new XMLHttpRequest();   
+  me1 = evt.target;
+  xmlhttp1.open("GET","rol=" + me1.value,true); xmlhttp1.send()
+} 
+function dimSeth(evt) {
+  var me1
+  var xmlhttp1=new XMLHttpRequest();   
+  me1 = evt.target;
+  xmlhttp1.open("GET","hgt=" + me1.value,true); xmlhttp1.send()
+} 
+function dimSety(evt) {
+  var me1
+  var xmlhttp1=new XMLHttpRequest();   
+  me1 = evt.target;
+  xmlhttp1.open("GET","yst=" + me1.value,true); xmlhttp1.send()  
+} 
+
+</script> 
+	</head>
+	<center><h1>菠萝万能控 6.8</h1></center>
+<center><h3>By 灯哥</h3></center>
+	<center><body>
+		<!-- Example of two JoyStick integrated in the page structure -->
+		<div class="row">
+			<div class="columnLateral">
+				<div id="joy1Div" style="width:200px;height:200px;margin:10px"></div>
+				转向(%) :<input id="joy1X" type="text" style="border-style:none;width:30px;" /></br>
+				前后(%) :<input id="joy1Y" type="text" style="border-style:none;width:30px;" />
+			</div></center>
+
+<script type="text/javascript">
+var Joy1 = new JoyStick('joy1Div');
+
+var joy1X = document.getElementById("joy1X");
+var joy1Y = document.getElementById("joy1Y");
+setInterval(function(){ joy1X.value=Joy1.GetX();joy1Y.value=Joy1.GetY();var xmlhttp1=new XMLHttpRequest(); xmlhttp1.open("GET","f="+joy1Y.value+"t="+joy1X.value,true); xmlhttp1.send();}, 700);
+</script>
+		
+		
+<br />
+<b><center>(- 俯仰角 +):<input id="Pitch_angle" type="text" style="border-style:none;width:25px;" />度</br></b>
+<center><input class= "dimSlide" type="range" id="dimSlide1" min="-10" max="10" step="0" value="0" onclick="dimSetp(event)" ></center>
+<b><center>(- 滚转角 +):<input id="Roll_angle" type="text" style="border-style:none;width:25px;" />度</br></b>
+<center><input class= "dimSlide" type="range" id="dimSlide2" min="-10" max="10" step="0" value="0" onclick="dimSetr(event)"></center>
+<b><center>(- 后前平移 +):<input id="for_bac_mov" type="text" style="border-style:none;width:25px;" />毫米</br></b>
+<center><input class= "dimSlide" type="range" id="dimSlide3" min="-40" max="40" step="0" value="0" onclick="dimSety(event)"></center>
+<b><center>(- 高度调节 +):<input id="height_adjust" type="text" style="border-style:none;width:30px;" />毫米</br></b>
+<center><input class= "dimSlide" type="range" id="dimSlide4" min="70" max="120" step="0" value="110" onclick="dimSeth(event)" oninput="dimSeth(event)" ></center>
+
+
+<script type="text/javascript">
+var Pitch_angle = document.getElementById("Pitch_angle");
+var Roll_angle = document.getElementById("Roll_angle");
+var for_bac_mov = document.getElementById("for_bac_mov");
+var height_adjust = document.getElementById("height_adjust");
+setInterval(function(){Pitch_angle.value=dimSlide1.value;Roll_angle.value=dimSlide2.value;for_bac_mov.value=dimSlide3.value;height_adjust.value=dimSlide4.value;}, 1000);
+function show_gyro()
+{   var xmlhttp1=new XMLHttpRequest();   
+    var oDiv=document.getElementById('gyro_sw');
+    if(oDiv.style.backgroundColor!='rgb(255, 158, 158)') 
+    {
+       oDiv.style.backgroundColor='#FF9E9E'; 
+       oDiv.value="陀螺仪：关"
+	   xmlhttp1.open("GET","key=gc",true); xmlhttp1.send()
+    }
+    else
+    {
+    oDiv.style.backgroundColor='#7DFF7D';
+    oDiv.value="陀螺仪：开"
+    alert("启动陀螺仪时会同步运行陀螺仪校准！请保持机器狗水平地面\n否则会以当前姿态作为校准0位，若当前姿态倾斜，将导致自稳姿态有误！");
+	  xmlhttp1.open("GET","key=go",true); xmlhttp1.send()
+    }
+}
+function show_gait()
+{
+    var xmlhttp1=new XMLHttpRequest();
+    var oDiv=document.getElementById('gait_sw');
+    if(oDiv.style.backgroundColor!='rgb(104, 195, 255)') 
+    {
+       oDiv.style.backgroundColor='#68C3FF'; 
+       oDiv.value="步态：TROT"
+       xmlhttp1.open("GET","key=g0",true); xmlhttp1.send()
+    }
+    else
+    {
+       oDiv.style.backgroundColor='#FBCF8B';
+       oDiv.value="步态：WALK"
+       xmlhttp1.open("GET","key=g1",true); xmlhttp1.send()
+    }
+}
+function save_para()
+{
+    var xmlhttp1=new XMLHttpRequest();
+    var oDiv=document.getElementById('para_set');
+    if(oDiv.style.backgroundColor!='rgb(125,255,125)') 
+    {
+       oDiv.style.backgroundColor='#7DFF7D';
+       oDiv.value="保存成功"
+       xmlhttp1.open("GET","key=sc",true); xmlhttp1.send()
+       setTimeout(function(){oDiv.value="保存为默认重心位置";oDiv.style.backgroundColor='#FF9E9E'},2000);
+    }
+}
+</script>
+
+<br />
+<br />
+<center><input type="button" style="width:200px; height:30px;background-color:#FF9E9E" id="para_set" value="保存为默认重心位置" onclick="save_para()" /></center>
+<br />
+<center><a style="width:200px; height:50px;" href="?key=ss">
+    <button style="width:200px; height:50px;"> 标定及设置 </button>
+</a></center>
+<br />
+<center><input type="button" style="width:200px; height:30px;background-color:#FF9E9E" id="gyro_sw" value="陀螺仪：关" onclick="show_gyro()" /></center>
+<br />
+<center><input type="button" style="width:200px; height:30px;background-color:#68C3FF" id="gait_sw" value="步态：TROT" onclick="show_gait()" /></center>
+<br />
+	</body>
+</html>
+
+
+
+
