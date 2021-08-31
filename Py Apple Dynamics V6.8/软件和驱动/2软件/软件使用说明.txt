@@ -1,0 +1,5 @@
+烧录固件：
+uPyCraft 和 flash_download_tool 都可以烧录固件，不过 flash_download_tool 相对稳定一些。当用 uPyCraft 无法烧录固件的时候，可以用 flash_download_tool 烧录。
+
+下载程序：
+使用 uPyCraft 下载程序到板子上 。
