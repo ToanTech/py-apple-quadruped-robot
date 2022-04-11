@@ -33,7 +33,7 @@
 
 - 用户支持**QQ群1**（舵机四足机器狗交流群 ）：**1071643412**
 - 用户支持**QQ群2**（无刷四足机器狗交流群 ）：**1005923565**
-- 讨论论坛（机器狗工坊）：http://www.leggedrobot.cn/forum.php?mod=forumdisplay&fid=44
+- 官方配置文档：http://padog.com.cn/#/
 - 官方Gitee仓库（国内下载资料，速度更快）：[ream_d (ream_d) - Gitee.com](https://gitee.com/ream_d)
 - 项目效果视频浏览（B站）：[灯哥开源四足机器人](https://space.bilibili.com/493192058/?share_source=copy_link&share_medium=iphone&bbid=4416d8abc8a2b4ce8ee4b65c247edea8&ts=1587442435)
 
@@ -61,7 +61,7 @@
 
 6.加入项目讨论总QQ群聊，还有讨论论坛，寻找爱好者组织
 
-7.进一步学习，尝试按照[此处说明](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=48&extra=page%3D1)二次开发
+7.进一步学习，尝试按照[二次开发](http://padog.com.cn/#/PAD-3.0-Manual/4二次开发/4.0二次开发)
 
 - #### 如果你已经有基础（直接搭建项目）
 
@@ -75,7 +75,7 @@
 
 5.加入项目讨论总QQ群聊，还有讨论论坛，寻找爱好者组织
 
-6.进一步学习，尝试按照[此处说明](http://www.leggedrobot.cn/forum.php?mod=viewthread&tid=48&extra=page%3D1)二次开发
+6.进一步学习，尝试按照[二次开发](http://padog.com.cn/#/PAD-3.0-Manual/4二次开发/4.0二次开发)
 
 7.有兴趣了解程序和机器人控制原理的原理的，可以按照 [频道1](https://space.bilibili.com/493192058/channel/detail?cid=135700) 和 [频道2](https://space.bilibili.com/493192058/channel/detail?cid=135699) 学习四足机器人原理视频
 
